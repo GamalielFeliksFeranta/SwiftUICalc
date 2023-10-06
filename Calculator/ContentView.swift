@@ -31,11 +31,11 @@ enum SemuaButton: String {
     var buttonColor: Color {
         switch self {
         case .add, .subtract, .multiply, .divide, .equal:
-            return Color.pink // You can change this to your preferred color
+            return Color.orange
         case .clear, .negativePositive, .percent:
-            return Color.pink // You can change this to your preferred color
+            return Color.gray // You can change this to your preferred color
         default:
-            return Color.pink
+            return Color.white
         }
     }
 }
@@ -81,7 +81,7 @@ struct ContentView: View {
                                     .font(.system(size: 30))
                                     .frame(width: self.buttonWidth(item: item), height: self.buttonHeight())
                                     .background(item.buttonColor)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.black)
                                     .cornerRadius(self.buttonWidth(item: item) / 2)
                             })
                         }
